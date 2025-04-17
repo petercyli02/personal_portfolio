@@ -8,7 +8,7 @@ const projects: ProjectType[] = [
     tech: "pyqt6, python",
     images: [
       {
-        path: "src/assets/vagusGUI/Main Screen.png",
+        path: "/src/assets/vagusGUI/Main Screen.png",
         caption: `
           main screen. top half is the video, bottom half is the neural data, which is also
           split into the top - a plot of the whole dataset, and the bottom - a plot of the
@@ -16,7 +16,7 @@ const projects: ProjectType[] = [
         `,
       },
       {
-        path: "src/assets/vagusGUI/glucose.png",
+        path: "/src/assets/vagusGUI/glucose.png",
         caption: `
           what the gui looks like after 2 hours of video + neural data had been annotated.
           the bottom can be used to show the glucose trend of the trend 
@@ -24,13 +24,13 @@ const projects: ProjectType[] = [
         `,
       },
       {
-        path: "src/assets/vagusGUI/category selection.png",
+        path: "/src/assets/vagusGUI/category selection.png",
         caption: `
           quickfire way for the user to select which category each time window belongs to
         `,
       },
       {
-        path: "src/assets/vagusGUI/Main Screen.png",
+        path: "/src/assets/vagusGUI/Main Screen.png",
         caption: `
           the video and the recording are not perfectly in sync. with some data annotated,
           you would be able to adjust for the offset
@@ -56,38 +56,38 @@ const projects: ProjectType[] = [
     tech: "next.js, nexus graphql, apollo graphql, prisma",
     images: [
       {
-        path: "src/assets/FinApp/register.png",
+        path: "/src/assets/FinApp/register.png",
         caption: `
           register a new account
         `,
       },
       {
-        path: "src/assets/FinApp/blank_account.png",
+        path: "/src/assets/FinApp/blank_account.png",
         caption: `
           home page for a fresh new account
         `,
       },
       {
-        path: "src/assets/FinApp/plaid.png",
+        path: "/src/assets/FinApp/plaid.png",
         caption: `
           connecting transactions via plaid 
         `,
       },
       {
-        path: "src/assets/FinApp/category_definition.png",
+        path: "/src/assets/FinApp/category_definition.png",
         caption: `
           defining custom spending categories
         `,
       },
       {
-        path: "src/assets/FinApp/categorised.png",
+        path: "/src/assets/FinApp/categorised.png",
         caption: `
           home page after connecting account, defining categories and using 
           ai to auto-categorise transactions
         `,
       },
       {
-        path: "src/assets/FinApp/file_upload.png",
+        path: "/src/assets/FinApp/file_upload.png",
         caption: `
           file upload portal
         `,
