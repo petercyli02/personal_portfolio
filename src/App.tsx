@@ -21,13 +21,13 @@ function App() {
         </BrowserRouter>
       </div>
       <div className="h-16 w-full bg-[#2a2d2e] flex justify-center items-center">
-        <a href="https://www.linkedin.com/in/peter-li-707085226/">
+        <a href="https://www.linkedin.com/in/peter-l-707085226/" target="_blank" rel="noopener noreferrer">
           <FaLinkedinIn size={24} color="gray" />
         </a>
       </div>
       <footer className="sticky bottom-0 ">
         <div className="h-6 w-full bg-[#3794ff] text-center text-white leading-6 text-sm">
-          COPYRIGHT &copy; 2025 PETER LI
+          COPYRIGHT &copy; 2026 PETER LI
         </div>
       </footer>
     </>

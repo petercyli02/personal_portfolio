@@ -47,13 +47,13 @@ const projects: ProjectType[] = [
         collected data, vagus nerve recordings that cover the duration of the 
         video. we were able to infer the physical activity of the rat just 
         from its neural data with a random forest classifier at 98%+ accuracy
-        the rat (e.g. eating, stationary, moving around etc). 
+        the rat (e.g. eating, stationary, moving around etc)
     `,
     link: "https://github.com/petercyli02/Analysis-of-vagus-nerve-recording",
   },
   {
     name: "finapp",
-    tech: "next.js, nexus graphql, apollo graphql, prisma",
+    tech: "next.js, nexus graphql, apollo graphql, prisma, gemini api",
     images: [
       {
         path: "/FinApp/register.png",
@@ -103,6 +103,57 @@ const projects: ProjectType[] = [
       more powerful graphical visualisations currently in progress!
     `,
     link: "https://github.com/BAronHW/Finance-App",
+  },
+  {
+    name: "dontvibecode",
+    tech: "django, python, next.js, gemini api",
+    images: [
+      {
+        path: "/dontvibecode/landing page 18012026.mp4",
+        caption: `
+          the landing page for the platform, very nice graphics and animations and goes over what
+          the platform has to offer
+        `,
+      },
+      {
+        path: "/dontvibecode/login.png",
+        caption: `
+          login page when the user first uses the app
+        `,
+      },
+      {
+        path: "/dontvibecode/newchat.png",
+        caption: `
+          default new chat page, with a long list of existing conversations and pinned exercises 
+          clickable on the left
+        `,
+      },
+      {
+        path: "/dontvibecode/lessons and exercises 18012026.mp4",
+        caption: `
+          quick walkthrough of an existing lesson. the chatbot is located on the right, and the user can expand on
+          an existing lesson by clicking on it, which will appear in the center of the screen
+          the lesson composes of several sections, including text breakdown and explanation, interactive exercises and
+          additonal external sources
+          there's the option to interact with the exerices, and ai feedback of the user's attempt is available
+          in this case the user done a good job:)
+        `,
+      },
+      {
+        path: "/dontvibecode/search.png",
+        caption: `
+          search modal for existing chats
+        `,
+      },
+    ],
+    description: `
+        a ai-powered educational tool for providing coding help for users in a way that empowers
+        them to understand the problem, rather than just providing a solution.
+        the platform resembles a chatbot, and provides custom lessons and interactive exercises aimed at
+        building understanding of technical concepts, catered for the user's ability level.
+        current features include ai powered interactive exercise generation as well as ai feedback.
+        still under development as of 18/01/26
+    `,
   },
 ];
 

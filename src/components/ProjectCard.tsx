@@ -9,7 +9,7 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <div className="max-w-[80%]">
       <div className="text-center">
-        <a className="text-xl text-[#4fc1ff]" href={project.link}>
+        <a className="text-xl text-[#4fc1ff]" href={project?.link}>
           {project.name}
         </a>
       </div>

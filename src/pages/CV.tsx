@@ -4,7 +4,20 @@ import CVSection from "../components/CVSection";
 const CVData = {
   Experiences: [
     {
-      title: "mar 2025 - now",
+      title: "jun 2025 - dec 2025",
+      subtitle: "software development engineer",
+      organisation: "Amazon Web Services",
+      content: `
+        worked in [redacted] team under aws billing, 
+        where we store private customer contract data in a machine readable format
+        i automated region-build deployment across multiple pipelines, 
+        significantly reducing deployment time and eliminating manual intervention,
+        designed and built a compliant data deletion system using lambda, sqs and sns, and
+        also extended the billing ingestion system to support a new customer credit discount type
+      `,
+    },
+    {
+      title: "mar 2025 - may 2025",
       subtitle: "fullstack engineer",
       organisation: "Tokunize",
       content: `
@@ -15,7 +28,7 @@ const CVData = {
         `,
     },
     {
-      title: "sep 2024 - mar 2025",
+      title: "sep 2024 - may 2025",
       subtitle: "fullstack engineer",
       organisation: "PortF",
       content: `
@@ -24,6 +37,7 @@ const CVData = {
           (next.js, apollo graphql, nexus graphql, prisma orm, ts, python)
           delivered key features such as a transaction summary table, 
           an user management system as well as llm pipelines using python langchain
+          also worked as a test engineer where i developed ui e2e tests using playwright
         `,
     },
     {
@@ -37,8 +51,8 @@ const CVData = {
     },
     {
       title: "jul 2022 - sep 2022",
-      subtitle: "software engineer intern",
-      organisation: "software engineer intern",
+      subtitle: "machine learning engineer intern",
+      organisation: "Optalysys",
       content: `
           built ml pipelines for linear regression, xgboost and fully connected nn
           compatible with homomorphic encryption, using concrete ml (based on sklearn

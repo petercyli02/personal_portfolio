@@ -18,7 +18,7 @@ const Carousel = ({ images }: Props) => {
     setIndex((index + 1) % images.length);
   };
 
-  const handleClick = (event: MouseEvent<HTMLDivElement>) => {
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
     const { clientX } = event;
     const { left, width } = event.currentTarget.getBoundingClientRect();
 
@@ -29,9 +29,22 @@ const Carousel = ({ images }: Props) => {
     }
   };
 
+  const isVideo = (path: string) => path.endsWith('.mp4');
+
   return (
     <>
-      <img src={images[index].path} onClick={handleClick} />
+      {isVideo(images[index].path) ? (
+        <video 
+          src={images[index].path} 
+          onClick={handleClick}
+          controls
+          muted
+          autoPlay
+          loop
+        />
+      ) : (
+        <img src={images[index].path} onClick={handleClick} />
+      )}
       <p className="my-2 text-[#9cdcfe] text-center">{images[index].caption}</p>
     </>
   );

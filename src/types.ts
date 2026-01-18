@@ -13,5 +13,5 @@ export interface ProjectType {
     caption: string;
   }[];
   description: string;
-  link: string;
+  link?: string;
 }
