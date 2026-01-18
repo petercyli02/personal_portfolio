@@ -81,6 +81,10 @@ const CVData = {
       content: "pyqt6, sklearn, pytorch, pandas, django",
     },
     {
+      title: "Kotlin",
+      content: "-",
+    },
+    {
       title: "C#",
       content: "-",
     },
