@@ -32,7 +32,7 @@ const Carousel = ({ images }: Props) => {
   return (
     <>
       <div className="flex justify-center items-center gap-2 ml-6">
-        <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4]" onClick={goLeft}>
+        <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
           <p>&lt;-</p>
         </button>
         {isVideo(images[index].path) ? (
@@ -44,7 +44,7 @@ const Carousel = ({ images }: Props) => {
         ) : (
           <img src={images[index].path} onClick={() => setIsModalOpen(true)} />
         )}
-        <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4]" onClick={goLeft}>
+        <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
           <p className="text-nowrap">-&gt;</p>
         </button>
       </div>
