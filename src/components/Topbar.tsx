@@ -48,7 +48,7 @@ const Topbar = ({ activeTab, setActiveTab }: Props) => {
     <div
       className={`sticky text-lg top-0 z-1 ${hasScrolled ? "shadow-b-md" : ""}`}
     >
-      <div className="h-12 w-full text-center bg-[#323232] text-[#7f7f7f] flex justify-center items-center">
+      <div className="[@media(max-width:840px)_and_(orientation:landscape)]:hidden h-12 w-full text-center bg-[#323232] text-[#7f7f7f] flex justify-center items-center">
         peter_li - personal_portfolio_0
       </div>
       <div className="flex h-12 bg-[#252526]">

@@ -175,8 +175,8 @@ const Portfolio = ({ ref }: Props) => {
           we all have to start somewhere right:)
           <br />
           <br />
-          click left and right on the images to browse screenshots, zoom in for
-          more resolution;)
+          use left and right arrows to browse screenshots/videos, click on 
+          the image/video itself for a closer look;) or just zoom in
         </p>
         <p>"""</p>
       </div>
