@@ -105,7 +105,7 @@ interface Props {
 
 const CV = ({ ref }: Props) => {
   return (
-    <div className="flex flex-col gap-8 pb-24 grow" ref={ref}>
+    <div className="flex flex-col gap-8 pb-48 grow pr-4" ref={ref}>
       <CVSection heading="EXPERIENCE" entries={CVData.Experiences} />
       <CVSection heading="EDUCATION" entries={CVData.Education} />
       <CVSection heading="SKILLS" entries={CVData.Skills} />

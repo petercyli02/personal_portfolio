@@ -164,8 +164,8 @@ interface Props {
 const Portfolio = ({ ref }: Props) => {
   return (
     <div ref={ref} className="flex flex-col items-center text-lg">
-      <h1 className="my-10 text-white text-4xl">Project Collection</h1>
-      <div className="text-[#ce9178] max-w-256">
+      <h1 className="my-10 text-center text-white text-4xl">Project Collection</h1>
+      <div className="text-[#ce9178] max-w-256 px-6">
         <p>"""</p>
         <p className="ml-8">
           a list of past and current projects i have been working on. it is a
@@ -180,7 +180,7 @@ const Portfolio = ({ ref }: Props) => {
         </p>
         <p>"""</p>
       </div>
-      <div className="grid grid-cols-2 text-lg w-full my-12 justify-around justify-items-center text-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 text-lg w-full my-12 justify-around justify-items-center text-white">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
