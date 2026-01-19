@@ -37,7 +37,7 @@ function App() {
           activeTab={active}
           setActiveTab={(tabName: string) => setActive(tabName)}
         />
-        <div className="flex font-mono pr-7">
+        <div className="flex font-mono pr-6">
           <aside className="hidden md:flex h-full w-6 text-lg flex-col text-[#858585] p-4">
             {lines.map((line) => (
               <p key={line}>{line}</p>

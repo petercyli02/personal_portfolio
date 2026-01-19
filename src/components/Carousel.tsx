@@ -31,7 +31,7 @@ const Carousel = ({ images }: Props) => {
 
   return (
     <>
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2 ml-6">
         <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4]" onClick={goLeft}>
           <p>&lt;-</p>
         </button>
