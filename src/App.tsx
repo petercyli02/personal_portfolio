@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Topbar from "./components/Topbar";
-import { useEffect, useRef, useState } from "react";
+import { act, useEffect, useRef, useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import CV from "./pages/CV";
 import Portfolio from "./pages/Portfolio";
@@ -15,6 +15,7 @@ function App() {
     const lineHeight = 28;
     const contentHeight = contentRef.current.scrollHeight;
     const numberOfLines = Math.ceil(contentHeight / lineHeight) - 5;
+    console.log({numberOfLines});
     setLines(Array.from({ length: numberOfLines }, (_, i) => i + 1));
   };
 
@@ -23,7 +24,7 @@ function App() {
     return () => {
       window.removeEventListener("resize", calculateLines);
     };
-  }, []);
+  }, [active]);
 
   useEffect(() => {
     const timeout = setTimeout(() => calculateLines(), 250);
