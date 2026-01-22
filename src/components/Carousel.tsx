@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MediaDisplay from "./MediaDisplay";
 
 
@@ -12,6 +12,11 @@ interface Props {
 const Carousel = ({ images }: Props) => {
   const [index, setIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [index]);
 
   const goLeft = () => {
     setIndex((index + images.length - 1) % images.length);
@@ -35,15 +40,20 @@ const Carousel = ({ images }: Props) => {
         <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
           <p>&lt;-</p>
         </button>
-        {isVideo(images[index].path) ? (
-          <video
-            src={images[index].path}
-            onClick={() => setIsModalOpen(true)}
-            autoPlay
-          />
-        ) : (
-          <img src={images[index].path} onClick={() => setIsModalOpen(true)} />
-        )}
+        <div className="relative">
+          {isVideo(images[index].path) ? (
+            <video
+              src={images[index].path}
+              onClick={() => setIsModalOpen(true)}
+              onWaiting={() => setIsLoading(true)}
+              onCanPlay={() => setIsLoading(false)}
+              autoPlay
+            />
+          ) : (
+            <img src={images[index].path} onClick={() => setIsModalOpen(true)} onLoad={() => setIsLoading(false)} />
+          )}
+          {isLoading && <div className="absolute inset-0 p-16 flex justify-center items-center bg-[#1e1e1e]" />}
+        </div>
         <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
           <p className="text-nowrap">-&gt;</p>
         </button>
