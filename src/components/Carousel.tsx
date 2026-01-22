@@ -40,7 +40,7 @@ const Carousel = ({ images }: Props) => {
         <button className="text-2xl text-[#ffd700] self-stretch hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
           <p>&lt;-</p>
         </button>
-        <div className="relative">
+        <div className="relative sm:min-h-72 sm:min-w-112">
           {isVideo(images[index].path) ? (
             <video
               key={index}
@@ -53,7 +53,7 @@ const Carousel = ({ images }: Props) => {
           ) : (
             <img key={index} src={images[index].path} onClick={() => setIsModalOpen(true)} onLoad={() => setIsLoading(false)} />
           )}
-          {isLoading && <div className="absolute inset-0 p-16 flex justify-center items-center bg-[#1e1e1e]" />}
+          {isLoading && <div className="absolute inset-0 p-16 flex justify-center items-center bg-[#1e2127]" />}
         </div>
         <button className="text-2xl text-[#ffd700] self-stretch hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goRight}>
           <p className="text-nowrap">-&gt;</p>
