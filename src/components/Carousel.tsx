@@ -37,12 +37,13 @@ const Carousel = ({ images }: Props) => {
   return (
     <>
       <div className="flex justify-center items-center gap-2 ml-6">
-        <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
+        <button className="text-2xl text-[#ffd700] self-stretch hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
           <p>&lt;-</p>
         </button>
         <div className="relative">
           {isVideo(images[index].path) ? (
             <video
+              key={index}
               src={images[index].path}
               onClick={() => setIsModalOpen(true)}
               onWaiting={() => setIsLoading(true)}
@@ -50,11 +51,11 @@ const Carousel = ({ images }: Props) => {
               autoPlay
             />
           ) : (
-            <img src={images[index].path} onClick={() => setIsModalOpen(true)} onLoad={() => setIsLoading(false)} />
+            <img key={index} src={images[index].path} onClick={() => setIsModalOpen(true)} onLoad={() => setIsLoading(false)} />
           )}
           {isLoading && <div className="absolute inset-0 p-16 flex justify-center items-center bg-[#1e1e1e]" />}
         </div>
-        <button className="text-2xl text-[#ffd700] py-8 hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goLeft}>
+        <button className="text-2xl text-[#ffd700] self-stretch hover:bg-[#d4d4d4] active:bg-[#d4d4d4]" onClick={goRight}>
           <p className="text-nowrap">-&gt;</p>
         </button>
       </div>

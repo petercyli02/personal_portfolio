@@ -54,7 +54,7 @@ const MediaDisplay = ({ path, goLeft, goRight, setIsModalOpen, caption }: Props)
                 </div>
             </button>
 
-            <div className="flex flex-[5] justify-center items-center">
+            <div className="flex flex-[5] justify-between items-center">
                 {/* Left arrow - responsive size */}
                 <button
                     onClick={goLeft}
