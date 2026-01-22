@@ -19,11 +19,18 @@ function App() {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", calculateLines);
+    if (!contentRef.current) return;
+    
+    const resizeObserver = new ResizeObserver(() => {
+      calculateLines();
+    });
+    
+    resizeObserver.observe(contentRef.current);
+    
     return () => {
-      window.removeEventListener("resize", calculateLines);
+      resizeObserver.disconnect();
     };
-  }, [active]);
+  }, [active, calculateLines]);
 
   useEffect(() => {
     const timeout = setTimeout(() => calculateLines(), 250);
