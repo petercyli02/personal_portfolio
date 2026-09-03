@@ -14,7 +14,6 @@ function App() {
     const lineHeight = 28;
     const contentHeight = contentRef.current.scrollHeight;
     const numberOfLines = Math.ceil(contentHeight / lineHeight) - 5;
-    console.log({ numberOfLines });
     setLines(Array.from({ length: numberOfLines }, (_, i) => i + 1));
   };
 
