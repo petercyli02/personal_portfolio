@@ -151,8 +151,45 @@ const projects: ProjectType[] = [
         them to understand the problem, rather than just providing a solution.
         the platform resembles a chatbot, and provides custom lessons and interactive exercises aimed at
         building understanding of technical concepts, catered for the user's ability level.
-        current features include ai powered interactive exercise generation as well as ai feedback.
-        still under development as of 18/01/26
+        features include ai powered interactive exercise generation as well as ai feedback, and lesson sharing with other users.
+        previously deployed via gcp, now switched to platforms with free tier, which includes render, neon and cloudflare
+    `,
+  },
+  {
+    name: "<unnamed couple app for long distance>",
+    tech: "react native, expo, supabase",
+    images: [
+      {
+        path: "/two-piggies/main screen.jpeg",
+        caption: `
+          the landing main screen for the platform
+        `,
+      },
+      {
+        path: "/two-piggies/theme.jpeg",
+        caption: `
+          screen for preview and customisation of themes/appearances for the app
+        `,
+      },
+      {
+        path: "/two-piggies/calendar.jpeg",
+        caption: `
+          shared calendar screen 
+        `,
+      },
+    ],
+    description: `
+        a private couple's app (react native / expo, typescript, supabase) where every entry syncs to both phones in about a second. no api server: row-level security enforces access at the database. push notifications route per device — fcm abroad, jpush in mainland china where firebase is blocked — fanning out to every registered transport and de-duplicating on arrival. plus a custom expo config plugin, ota updates with fingerprinted runtime versions, and bilingual en/中文
+    `,
+  },
+  {
+    name: "<unnamed messenger app>",
+    tech: "python, fastapi, react, websockets",
+    images: [],
+    description: `
+        a messenging service with an auth system and multi user chatrooms
+        primarily for learning async python, fastapi and websockets
+        currently under development...
     `,
   },
 ];
@@ -164,7 +201,9 @@ interface Props {
 const Portfolio = ({ ref }: Props) => {
   return (
     <div ref={ref} className="flex flex-col items-center text-lg pb-48">
-      <h1 className="my-10 text-center text-white text-4xl">Project Collection</h1>
+      <h1 className="my-10 text-center text-white text-4xl">
+        Project Collection
+      </h1>
       <div className="text-[#ce9178] max-w-256 px-6">
         <p>"""</p>
         <p className="ml-8">
@@ -175,8 +214,13 @@ const Portfolio = ({ ref }: Props) => {
           we all have to start somewhere right:)
           <br />
           <br />
-          use left and right arrows to browse screenshots/videos, click on 
-          the image/video itself for a closer look;) or just zoom in
+          most projects listed here including the site itself comprise of mostly handwritten code rather
+          than ai generated, because i believe
+          even in the age of agentic tools there is value in actual in depth understanding
+          <br />
+          <br />
+          use left and right arrows to browse screenshots/videos, click on the
+          image/video itself for a closer look;) or just zoom in
         </p>
         <p>"""</p>
       </div>

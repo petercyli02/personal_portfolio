@@ -4,6 +4,19 @@ import CVSection from "../components/CVSection";
 const CVData = {
   Experiences: [
     {
+      title: "apr 2026 - jul 2026",
+      subtitle: "software engineer contractor",
+      organisation: "Dojostack CRE",
+      content: `
+        worked under a short term contract for hk based startup Dojostack
+        building fullstack features, tests for the core property underwriting platform
+        including ai rent roll extraction, datatables and assumption inheritance system
+        devised a highly efficient agentic workflow that saw up to 12 claude code agents
+        running in parallel and in sync across 3 branches, complete with tdd and 
+        code review gates
+      `,
+    },
+    {
       title: "jun 2025 - dec 2025",
       subtitle: "software development engineer",
       organisation: "Amazon Web Services",
